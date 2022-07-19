@@ -1,0 +1,58 @@
+Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
+
+ 
+
+Example 1:
+
+
+Input: root = [3,9,20,null,null,15,7]
+Output: [[3],[9,20],[15,7]]
+Example 2:
+
+Input: root = [1]
+Output: [[1]]
+Example 3:
+
+Input: root = []
+Output: []
+ 
+
+Constraints:
+
+The number of nodes in the tree is in the range [0, 2000].
+-1000 <= Node.val <= 1000
+============================================================================================================================================================================
+JAVA SOLUTION
+
+class Solution {
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> res= new ArrayList<>();
+      Queue<TreeNode>  queue = new LinkedList<>();
+        if(root==null){
+            return res;
+        }
+        queue.offer(root);
+        while(!queue.isEmpty()){
+            List<Integer> curr = new ArrayList<>();
+            Queue<TreeNode> queue2= new LinkedList<>();
+            while(!queue.isEmpty()){
+                TreeNode top= queue.poll();
+                curr.add(top.val);
+                if(top.left!=null){
+                    queue2.add(top.left);
+                }
+                if(top.right!=null){
+                    queue2.add(top.right);
+                }
+            }
+            res.add(curr);
+                queue=queue2;
+            
+            
+            
+            
+        }
+        return res;
+                                                   
+    }
+}
