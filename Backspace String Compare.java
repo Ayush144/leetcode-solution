@@ -3,7 +3,7 @@
 // Note that after backspacing an empty text, the text will continue empty.
 
  
-
+Test code
 // Example 1:
 
 // Input: s = "ab#c", t = "ad#c"
