@@ -2,7 +2,7 @@
 
 // Note that after backspacing an empty text, the text will continue empty.
 
- 
+ Test cases
 Test code
 // Example 1:
 
