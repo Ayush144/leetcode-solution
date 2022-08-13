@@ -4,7 +4,7 @@
 Given the root of a binary tree, return the postorder traversal of its nodes' values.
 
  
-
+Test Cases
 Example 1:
 
 
@@ -25,7 +25,7 @@ Constraints:
 The number of the nodes in the tree is in the range [0, 100].
 -100 <= Node.val <= 100
  ===================================================================================================================================================================
- JAVA SOLUTION
+ JAVA SOLUTION java solution
 class Solution {
     List<Integer> list= new ArrayList<Integer>();
     public List<Integer> postorderTraversal(TreeNode root) {
